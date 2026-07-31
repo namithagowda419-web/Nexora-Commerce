@@ -1,94 +1,62 @@
-# Veloura — Where Style Meets Simplicity
+# NEXORA — "Shop Smarter. Live Better." 🚀
 
-A complete, production-ready full-stack luxury e-commerce application built with React + Vite, Node.js + Express.js, MongoDB, Tailwind CSS, and Framer Motion. Features a Deep Plum & Cream luxury design, glassmorphism UI, 3D interactive floating effects, JWT authentication, full shopping bag and checkout workflow, printable order invoices, and an Admin Panel Dashboard with analytics.
+NEXORA is a modern 3D tech e-commerce platform built with React, Vite, Node.js, Express, Tailwind CSS, Framer Motion, and MongoDB.
 
----
-
-## 🎨 Color Palette
-- **Primary (Deep Plum)**: `#6F4A8E` / `#58386D`
-- **Secondary (Soft Lavender)**: `#C8A2C8`
-- **Accent (Dusty Mauve)**: `#B08BB8`
-- **Background (Warm Cream)**: `#FFF9F5` (Dark Mode: `#18111D`)
-- **Card Background**: `#FFFFFF` (Dark Mode: `#231A2B`)
-- **Text (Charcoal)**: `#2F2A35`
+- **GitHub Repository**: [https://github.com/namithagowda419-web/Nexora-Commerce.git](https://github.com/namithagowda419-web/Nexora-Commerce.git)
 
 ---
 
-## ⚡ Quick Start Instructions
+## 🎨 Design System & Visual Palette
+- **Primary Accent**: Electric Violet (`#7C3AED`)
+- **Secondary Accent**: Neon Coral (`#FF6B8A`)
+- **Hover Highlight**: Soft Cyan (`#67E8F9`)
+- **Background Body**: Deep Midnight (`#0F1021`)
+- **Cards**: Dark Indigo (`#1B1C3A`) with `backdrop-blur-xl` frosted glassmorphism
+- **Typography**: Sans-Serif (Inter & Poppins)
 
-### 1. Database Setup
-Local MongoDB running at:
-`mongodb://127.0.0.1:27017/veloura`
+---
 
-### 2. Backend API Server (`http://localhost:5000`)
+## 🏬 10 Product Departments (100 Seeded Products)
+1. **Electronics (10 items)**
+2. **Fashion (10 items)**
+3. **Shoes (10 items)**
+4. **Beauty (10 items)**
+5. **Home & Kitchen (10 items)**
+6. **Furniture (10 items)**
+7. **Sports (10 items)**
+8. **Books (10 items)**
+9. **Grocery (10 items)**
+10. **Accessories (10 items)**
+
+---
+
+## ⚡ Deployment on Vercel
+
+The project includes a root `vercel.json` and serverless API entry point (`api/index.js`) for one-click Vercel deployment:
+
+1. Log in to your [Vercel Dashboard](https://vercel.com).
+2. Click **"Add New..."** → **"Project"**.
+3. Import your GitHub repository: `namithagowda419-web/Nexora-Commerce`.
+4. Vercel will automatically detect `vercel.json` and deploy both:
+   - **Frontend App**: Vite React Single Page Application
+   - **Backend API**: Express Serverless Functions (`/api/*`)
+5. Click **Deploy**!
+
+---
+
+## 💻 Local Development
+
+### 1. Backend Server
 ```bash
 cd backend
 npm install
 npm run dev
 ```
-*The Express server automatically initializes database collections and seeds initial luxury product data on first launch.*
 
-### 3. Frontend Application (`http://localhost:5173`)
-In a separate terminal window:
+### 2. Frontend Development Server
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-*Open `http://localhost:5173` in your web browser.*
-
----
-
-## 🔑 Demo Credentials
-
-### 👑 Admin Account
-- **Email**: `admin@veloura.com`
-- **Password**: `admin123`
-- *Full access to Admin Dashboard Analytics, Product Catalogue CRUD, Order Status Management, and Category Management.*
-
-### 👤 Standard Client Account
-- **Email**: `user@veloura.com`
-- **Password**: `user123`
-
-*(You can also use the 1-Click Demo Buttons on the Sign In page for instant login!)*
-
----
-
-## 🎁 Demo Promo Vouchers
-- `VELOURA10` — 10% Off
-- `LUXURY20` — 20% Off VIP Discount
-
----
-
-## 🛠️ Tech Stack & Directory Structure
-- **Frontend**: React, Vite, Tailwind CSS, Framer Motion, Lucide Icons, Axios, Canvas Confetti.
-- **Backend**: Node.js, Express.js, Mongoose (MongoDB), JWT Authentication, bcryptjs, Multer, dotenv.
-
-```
-c:/Users/Namitha L/Desktop/Project3/
-├── backend/
-│   ├── config/ (db.js)
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── .env
-│   ├── .env.example
-│   ├── server.js
-│   └── package.json
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── context/
-    │   ├── pages/
-    │   ├── services/
-    │   ├── utils/
-    │   ├── App.jsx
-    │   └── index.css
-    ├── .env
-    ├── .env.example
-    ├── index.html
-    ├── tailwind.config.js
-    └── package.json
-```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
