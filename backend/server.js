@@ -222,9 +222,9 @@ app.get('/api/health', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+if (!process.env.VERCEL) {
   app.listen(PORT, () => {
-    console.log(`[NEXORA Server] Modern 3D Tech E-Commerce Backend running on http://localhost:${PORT}`);
+    console.log(`[NEXORA Server] Modern 3D E-Commerce Backend running on http://localhost:${PORT}`);
   });
 }
 
