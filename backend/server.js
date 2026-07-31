@@ -23,6 +23,12 @@ const app = express();
 app.use(cors({ origin: '*', credentials: true }));
 app.use(express.json());
 
+// DB Connection Middleware Flag
+app.use((req, res, next) => {
+  req.dbConnected = require('mongoose').connection.readyState === 1;
+  next();
+});
+
 // Prepare 100 Fallback Products Memory Store for NEXORA
 const FALLBACK_PRODUCTS = sampleProducts.map((p, idx) => ({
   _id: `nex-${idx + 1}`,
@@ -178,11 +184,6 @@ app.get('/api/products/:id', async (req, res, next) => {
   res.json(found || FALLBACK_PRODUCTS[0]);
 });
 
-// DB Connection Middleware Flag
-app.use((req, res, next) => {
-  req.dbConnected = require('mongoose').connection.readyState === 1;
-  next();
-});
 
 // Connect to MongoDB & Auto-Seed Check
 connectDB().then(async (isConnected) => {

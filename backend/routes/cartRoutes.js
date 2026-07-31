@@ -20,4 +20,9 @@ router.route('/item/:itemId')
   .put(updateCartQuantity)
   .delete(removeFromCart);
 
+router.route('/:itemId')
+  .put(updateCartQuantity)
+  .delete(removeFromCart);
+
 module.exports = router;
+
